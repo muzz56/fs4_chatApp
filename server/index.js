@@ -16,11 +16,15 @@ const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
 const router = require('./router');
 
-//mongoDB url and connection.
-const connectionString = "mongodb://userNas:userNas@cluster0-shard-00-00-jzbyc.gcp.mongodb.net:27017,cluster0-shard-00-01-jzbyc.gcp.mongodb.net:27017,cluster0-shard-00-02-jzbyc.gcp.mongodb.net:27017/chat_App?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+// //mongoDB url and connection.
+// const connectionString = "mongodb://userNas:userNas@cluster0-shard-00-00-jzbyc.gcp.mongodb.net:27017,cluster0-shard-00-01-jzbyc.gcp.mongodb.net:27017,cluster0-shard-00-02-jzbyc.gcp.mongodb.net:27017/chat_App?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+
+// Set up mongoose connection
+var dev_db_url = 'mongodb://userNas:userNas@cluster0-shard-00-00-jzbyc.gcp.mongodb.net:27017,cluster0-shard-00-01-jzbyc.gcp.mongodb.net:27017,cluster0-shard-00-02-jzbyc.gcp.mongodb.net:27017/chat_App?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority'
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 //Connect to MongoDB
-mongoose.connect( connectionString,({ useNewUrlParser: true },{ useUnifiedTopology: true }))
+mongoose.connect( mongoDB,({ useNewUrlParser: true },{ useUnifiedTopology: true }))
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
