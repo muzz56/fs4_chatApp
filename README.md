@@ -7,3 +7,5 @@ Setup:
 
 Admin username: admin
       Password: password
+
+     Live URL:  https://friendly-snyder-1f7d4c.netlify.com

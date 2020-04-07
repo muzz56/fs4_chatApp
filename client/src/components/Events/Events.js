@@ -6,9 +6,9 @@ import './Events.css';
 
 let socket;
 
-  const ENDPOINT = 'localhost:5000';
+  //const ENDPOINT = 'localhost:5000';
 
-  // const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
+  const ENDPOINT = 'https://assignment-chat-application.herokuapp.com/';
 
   export default function Events() {
 

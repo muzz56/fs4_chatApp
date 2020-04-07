@@ -6,6 +6,7 @@
   },
   "private": true,
   "dependencies": {
+    "build": "^0.1.4",
     "query-string": "^6.8.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
