@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-//const moment = require('moment');
 var EventLog = new mongoose.Schema({
     type: String,
     name:{type:String, default:null},

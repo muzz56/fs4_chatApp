@@ -3,7 +3,7 @@
    display: flex;
   flex-direction: column;
   margin-left: 10px;
-  color: white;
+  color: hsl(0, 8%, 93%);
   height: 70%;
   /* justify-content: space-between;  */
 }
@@ -11,13 +11,12 @@
 .activeContainer {
   display: flex;
   flex-direction: column;
-  background-color: DodgerBlue;
-  background-color: #f1f1f1;
+  background-color: #f1ebeb;
   color: dodgerblue;
   width: 100%;
   margin: 5px;
   line-height: 20px;
-  font-size: 10px;
+  font-size: 30px;
   display: flex;
   align-items: center;
   margin-bottom: 0%;
@@ -31,10 +30,6 @@
 .activeContainer img {
   padding-left: 10px;
 }
-
-/* .textContainer h1 {
-  margin-bottom: 0px;
-} */
 
 @media (min-width: 320px) and (max-width: 1200px) {
   .textContainer {

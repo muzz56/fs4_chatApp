@@ -1,19 +1,24 @@
 import React from 'react';
-
-import Chat from './components/Chat/Chat';
-import Signin from './components/Signin/Signin';
-import Admin from './components/Admin/Admin';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Chat, {PRoute} from './components/Chat/Chat';
+import Signin, {PrivateRoute} from './components/Signin/Signin';
 import Events from './components/Events/Events';
-
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import Error from './components/Error/Error';
 
 const App = () => {
   return (
     <Router>
+      <Switch>
       <Route path="/" exact component={Signin} />
-      <Route path="/chat" component={Chat} />
-      <Route path="/admin" component={Admin} />
-      <Route path="/events" component={Events} />
+      <PRoute path="/chat" >
+        <Chat />
+        </PRoute>
+      <PrivateRoute path="/events" >
+        <Events />
+        </PrivateRoute>
+
+    <Route component={Error} />
+    </Switch>
     </Router>
   );
 }
